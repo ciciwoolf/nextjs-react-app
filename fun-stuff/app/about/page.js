@@ -1,7 +1,15 @@
+import styles from "./about.module.css";
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <main>
-      <h2>My name is Christine Woolf, but please, call me Cici for short. </h2>
+      <img src="./logo.png"></img>
+      <p>
+        <Link href="/" className={styles.link}>
+          Home
+        </Link>
+      </p>
     </main>
   );
 }
