@@ -9,6 +9,9 @@ export default function Home() {
       <p>
         <Link href="/about">About Me</Link>
       </p>
+      <p>
+        <Link href="/">Contact</Link>
+      </p>
     </main>
   );
 }
