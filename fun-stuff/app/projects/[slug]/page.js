@@ -7,9 +7,6 @@ export default function ProjectPage({ params }) {
       <p>
         <Link href="/projects">Back to Projects</Link>
       </p>
-      <p>
-        <Link href="/">Home</Link>
-      </p>
     </main>
   );
 }

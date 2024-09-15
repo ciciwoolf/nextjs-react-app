@@ -1,57 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap");
+@import "./variables.css";
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-family-primary);
   height: 100%;
 }
 
 body {
   height: 100%;
   margin: 0;
-  background: linear-gradient(180deg, #07183d, #001a34);
-  color: #ddd8e4;
+  background: linear-gradient(
+    180deg,
+    var(--background-gradient-start),
+    var(--background-gradient-end)
+  );
+  color: var(--body-text-color);
 }
 
 main {
   text-align: center;
-  margin: 5rem auto;
+  margin: var(--main-margin);
 }
 
 main img {
-  width: 8rem;
-  height: 8rem;
+  width: var(--image-width);
+  height: var(--image-height);
   object-fit: cover;
-  filter: drop-shadow(0 0 4px #f6c363);
+  filter: drop-shadow(0 0 var(--image-shadow-size) var(--image-shadow-color));
 }
 
 .main {
   text-align: center;
-  padding: 20px;
+  padding: var(--main-padding);
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: var(--title-font-size);
 }
 
 .position {
-  font-size: 1.5rem;
-  color: gray;
+  font-size: var(--position-font-size);
+  color: var(--position-text-color);
 }
 
 .link {
-  color: turquoise;
+  color: var(--link-color);
   text-decoration: underline;
 }
+
+h1 {
+  color: var(--primary-text-color);
+}
+
 p {
-  font-size: 16px;
+  font-size: var(--paragraph-font-size);
+  color: var(--primary-text-color);
 }
 
 p a:hover,
 p a:active {
-  color: #bd3df4;
-  border-color: #bd3df4;
+  color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
 }
