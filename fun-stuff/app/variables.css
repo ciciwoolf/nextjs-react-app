@@ -1,4 +1,15 @@
 /* variables.css */
+
+/* CSS HEX 
+
+ name="Smoky black" hex="0f0a0a"
+name="Isabelline" hex="f5efed"
+name="Blue (Munsell)" hex="2292a4"
+name="Citrine" hex="bdbf09" 
+ name="Cocoa Brown" hex="d96c06"
+
+*/
+
 :root {
   /* Colors */
   --primary-text-color: #ddd6cb;
