@@ -39,16 +39,17 @@ name="Citrine" hex="bdbf09"
   --logo-font-size: 1.5rem;
 
   /* Sizes */
-  --image-width: 8rem;
-  --image-height: 8rem;
+  --image-width: 5rem;
+  --image-height: 5rem;
   --image-shadow-size: 4px;
-  --logo-image-width: 15rem;
-  --logo-image-height: 15rem;
+  --logo-image-width: 5rem;
+  --logo-image-height: 5rem;
   --logo-shadow-size: 0.75rem;
 
   /* Spacing */
   --header-padding: 2rem 1rem;
   --header-padding-large: 2rem 10%;
+  --header-padding-small: 1.5rem 5%;
   --nav-gap: 1.5rem;
   --nav-link-padding: 0.5rem 1rem;
   --nav-link-border-radius: 0.5rem;
