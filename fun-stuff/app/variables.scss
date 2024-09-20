@@ -1,0 +1,60 @@
+/* variables.css */
+
+/* CSS HEX 
+
+ name="Smoky black" hex="0f0a0a"
+name="Isabelline" hex="f5efed"
+name="Blue (Munsell)" hex="2292a4"
+name="Citrine" hex="bdbf09" 
+ name="Cocoa Brown" hex="d96c06"
+
+*/
+// variables.scss
+
+$primary-text-color: #ddd6cb;
+$gradient-start: #37b7c3;
+$gradient-end: #088395;
+$text-shadow-color: rgba(248, 190, 42, 0.8);
+$logo-text-color: #ddd6cb;
+$logo-shadow-color: rgba(0, 0, 0, 0.5);
+
+$background-gradient-start: #070f2b;
+$background-gradient-end: #021526;
+
+$position-text-color: gray;
+$link-color: #2e8a99;
+$link-hover-color: #2e8a99;
+
+/* Font families */
+$font-family-primary: "Karla", sans-serif;
+$font-family-secondary: "Karla", sans-serif;
+$font-family-logo: "Karla", sans-serif;
+
+/* Font sizes */
+$title-font-size: 2.5rem;
+$position-font-size: 1.5rem;
+$paragraph-font-size: 25px;
+$nav-font-size: 1.25rem;
+$logo-font-size: 1.5rem;
+
+/* Sizes */
+$image-width: 5rem;
+$image-height: 5rem;
+$image-shadow-size: 4px;
+$logo-image-width: 5rem;
+$logo-image-height: 5rem;
+$logo-shadow-size: 0.75rem;
+
+/* Spacing */
+$header-padding: 2rem 1rem;
+$header-padding-large: 2rem 10%;
+$header-padding-small: 1.5rem 5%;
+$nav-gap: 1.5rem;
+$nav-link-padding: 0.5rem 1rem;
+$nav-link-border-radius: 0.5rem;
+$logo-gap: 2rem;
+
+/* Layout */
+$main-margin: 5rem auto;
+$main-padding: 20px;
+$logo-letter-spacing: 0.15rem;

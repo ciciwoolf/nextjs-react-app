@@ -12,6 +12,9 @@ export default function MainHeader() {
       <nav className={classes.nav}>
         <ul>
           <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
             <Link href="/about">About Me</Link>
           </li>
           <li>

@@ -1,18 +1,22 @@
+@import "@app/variables.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--header-padding);
+  padding: $header-padding;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: 768px) {
-    padding: var(--header-padding-large);
+    padding: $header-padding-large;
     flex-direction: row;
   }
 
   @media (max-width: 767px) {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
   }
 }
 
@@ -22,41 +26,48 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: var(--nav-gap);
-    font-size: var(--nav-font-size);
+    gap: $nav-gap;
+    font-size: $nav-font-size;
+    position: relative;
+    z-index: 1;
+    align-items: center;
 
     @media (max-width: 767px) {
       flex-direction: column;
+      align-items: center;
       gap: 1rem; /* Adjust the gap for mobile view */
+      padding: 0;
+    }
+  }
+
+  li {
+    @media (max-width: 767px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
     }
   }
 
   a {
     text-decoration: none;
-    color: var(--primary-text-color);
-    padding: var(--nav-link-padding);
-    border-radius: var(--nav-link-border-radius);
+    color: $primary-text-color;
+    padding: $nav-link-padding;
+    border-radius: $nav-link-border-radius;
+    z-index: 1;
 
     &:hover,
     &:active {
-      background: linear-gradient(
-        90deg,
-        var(--gradient-start),
-        var(--gradient-end)
-      );
+      background: linear-gradient(90deg, $gradient-start, $gradient-end);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 18px var(--text-shadow-color);
+      text-shadow: 0 0 18px $text-shadow-color;
     }
   }
 
   .active {
-    background: linear-gradient(
-      90deg,
-      var(--gradient-start),
-      var(--gradient-end)
-    );
+    background: linear-gradient(90deg, $gradient-start), $gradient-end;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -67,27 +78,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--logo-gap);
+  gap: $logo-gap;
   text-decoration: none;
-  color: var(--logo-text-color);
+  color: $logo-text-color;
   font-weight: bold;
-  font-family: var(--font-family-logo);
-  letter-spacing: var(--logo-letter-spacing);
+  font-family: $font-family-logo;
+  letter-spacing: $logo-letter-spacing;
   text-transform: uppercase;
-  font-size: var(--logo-font-size);
+  font-size: $logo-font-size;
+  position: relative;
+  z-index: 1;
 
   img {
-    width: var(--logo-image-width);
-    height: var(--logo-image-height);
+    width: $logo-image-width;
+    height: $logo-image-height;
     object-fit: contain;
-    filter: drop-shadow(0 0 var(--logo-shadow-size) var(--logo-shadow-color));
   }
 
   &:hover {
-    text-shadow: 0 0 18px var(--text-shadow-color);
+    text-shadow: 0 0 18px $text-shadow-color;
   }
 
   @media (max-width: 767px) {
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 }

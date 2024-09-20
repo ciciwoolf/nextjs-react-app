@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family-primary;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    $background-gradient-start,
+    $background-gradient-end
+  );
+  color: $primary-text-color;
+}
+
+main {
+  text-align: center;
+  margin: $main-margin;
+}
+
+main img {
+  width: $image-width;
+  height: $image-height;
+  object-fit: cover;
+}
+
+.main {
+  text-align: center;
+  padding: $main-padding;
+}
+
+.title {
+  font-size: $title-font-size;
+}
+
+.position {
+  font-size: $position-font-size;
+  color: $position-text-color;
+}
+
+.link {
+  color: $link-color;
+  text-decoration: underline;
+}
+
+h1 {
+  color: $primary-text-color;
+
+  @media (max-width: 767px) {
+    gap: 1rem; /* Adjust the gap for mobile view */
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+p,
+a {
+  font-size: $paragraph-font-size;
+  color: $primary-text-color;
+
+  @media (max-width: 767px) {
+    gap: 1rem; /* Adjust the gap for mobile view */
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+a {
+  font-size: $paragraph-font-size;
+  color: $primary-text-color;
+  text-decoration: none;
+
+  @media (max-width: 767px) {
+    gap: 1rem; /* Adjust the gap for mobile view */
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+p a:hover,
+p a:active {
+  color: $link-hover-color;
+  border-color: $link-hover-color;
+}
