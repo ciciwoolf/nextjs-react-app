@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <header className={styles.header}></header>
       <div className={styles.hero}>
-        <p className={styles.animate}>Hello Wesley</p>
+        <p className={styles.animate}>Hello</p>
         <p>Welcome to my Website</p>
       </div>
       <div className={styles.lines}>
