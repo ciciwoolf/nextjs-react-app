@@ -3,6 +3,13 @@ import logoImg from "@assets/logo.png";
 import classes from "./main-header.module.scss";
 import Image from "next/image";
 
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Me" },
+  { href: "/contact", label: "Contact" },
+  { href: "/projects", label: "Projects" },
+];
+
 export default function MainHeader() {
   return (
     <header className={classes.header}>
@@ -11,18 +18,11 @@ export default function MainHeader() {
       </Link>
       <nav className={classes.nav}>
         <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about">About Me</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
+          {links.map((link, index) => (
+            <li key={index}>
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
