@@ -6,7 +6,7 @@ export default function ProjectPage({ params }) {
       <h1> Bootcamp Project </h1>
       <p>
         <Link href="https://github.com/ciciwoolf/proyecto_ciciwoolf_digitalhouse">
-          See My First Repo Ever - Digitalhouse Bootcamp
+          Digitalhouse Bootcamp Project
         </Link>
       </p>
       <p>
