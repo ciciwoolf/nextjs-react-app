@@ -1,7 +1,8 @@
 import Link from "next/link";
 import logoImg from "@assets/logo.png";
-import classes from "./main-header.module.scss";
+import styles from "./main-header.module.scss";
 import Image from "next/image";
+import NavLink from "./nav-link";
 
 const links = [
   { href: "/", label: "Home" },
@@ -12,15 +13,15 @@ const links = [
 
 export default function MainHeader() {
   return (
-    <header className={classes.header}>
-      <Link className={classes.logo} href="/">
+    <header className={styles.header}>
+      <Link className={styles.logo} href="/">
         <Image src={logoImg} alt="Logo" width={100} height={100} />
       </Link>
-      <nav className={classes.nav}>
+      <nav className={styles.nav}>
         <ul>
           {links.map((link, index) => (
             <li key={index}>
-              <Link href={link.href}>{link.label}</Link>
+              <NavLink href={link.href}>{link.label}</NavLink>
             </li>
           ))}
         </ul>

@@ -1,0 +1,55 @@
+@import "@app/variables.scss";
+
+.nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: $nav-gap;
+    font-size: $nav-font-size;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem; /* Adjust the gap for mobile view */
+      padding: 0;
+    }
+  }
+
+  li {
+    @media (max-width: 767px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-text-color;
+    padding: $nav-link-padding;
+    border-radius: $nav-link-border-radius;
+    z-index: 1;
+
+    &:hover,
+    &:active {
+      background: linear-gradient(90deg, $gradient-start, $gradient-end);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 18px $text-shadow-color;
+    }
+  }
+
+  .active {
+    background: linear-gradient(90deg, $gradient-start), $gradient-end;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
