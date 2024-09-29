@@ -56,21 +56,13 @@
     border-radius: $nav-link-border-radius;
     z-index: 1;
 
-    &:hover,
-    &:active {
+    &:hover {
       background: linear-gradient(90deg, $gradient-start, $gradient-end);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 18px $text-shadow-color;
     }
-  }
-
-  .active {
-    background: linear-gradient(90deg, $gradient-start), $gradient-end;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
 

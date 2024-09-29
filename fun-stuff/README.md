@@ -3,4 +3,4 @@ A Bio Page using React and Nextjs
 ## TODO
 
 More Bio Details
-Add Project link to Digital Artwork
+Add some parallax scrolling effects to Home Page, plus bio pic

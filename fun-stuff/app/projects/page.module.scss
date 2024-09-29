@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.links {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  z-index: 1;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 1rem; /* Adjust the gap for mobile view */
+  }
+}
+
+.projectLink {
+  text-decoration: none;
+  color: $primary-text-color;
+  padding: $nav-link-padding;
+  border-radius: $nav-link-border-radius;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    background: linear-gradient(90deg, $gradient-start, $gradient-end);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 18px $text-shadow-color;
+  }
+}
