@@ -1,6 +1,3 @@
-A Bio Page using React and Nextjs
+Building a Site with Reactjs and Nextjs
 
-## TODO
-
-More Bio Details
-Add some parallax scrolling effects to Home Page, plus bio pic
+Check out the progress here: https://bio-nextjs-theta.vercel.app/
