@@ -6,8 +6,97 @@
   z-index: 1;
 }
 
+.greeting {
+  font-size: 2rem;
+}
+
 .hero {
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+  align-items: center;
   text-align: center;
   position: relative;
   z-index: 1;
+  animation: fade 7s ease-in-out forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin dots($count) {
+  $colors: (
+    #f5efed,
+    // Isabelline
+    #2292a4,
+    // Blue (Munsell)
+    #bdbf09,
+    #a70947,
+    // Citrine
+  ); // Example HSL colors
+  $text-shadow: ();
+
+  @for $i from 0 through $count {
+    $random-color: nth($colors, random(length($colors)));
+    $text-shadow: $text-shadow,
+      (-0.5 + (random()) * 3) +
+        em
+        (-0.5 + (random()) * 2) +
+        em
+        2px
+        $random-color;
+  }
+  text-shadow: $text-shadow;
+}
+
+.colorsBody {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    $background-gradient-start,
+    $background-gradient-end
+  );
+
+  &::before,
+  &::after {
+    content: ". *";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    font-size: 3vmin;
+    mix-blend-mode: screen;
+    color: transparent;
+    @include dots(40);
+    animation: move 44s -27s infinite ease-in-out alternate;
+  }
+
+  &::after {
+    animation-duration: 43s;
+    animation-delay: -32s;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
 }

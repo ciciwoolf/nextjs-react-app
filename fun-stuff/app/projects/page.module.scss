@@ -46,6 +46,8 @@
 .animate {
   font-size: 2rem;
   font-weight: bold;
+  position: relative;
+  z-index: 1;
   background: linear-gradient(
     90deg,
     #ff6a00,
