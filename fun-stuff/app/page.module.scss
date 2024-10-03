@@ -13,7 +13,7 @@
 .hero {
   display: flex;
   justify-content: center;
-  padding: 10rem;
+  padding-top: 1rem;
   align-items: center;
   text-align: center;
   position: relative;
@@ -45,7 +45,7 @@
     #bdbf09,
     #a70947,
     // Citrine
-  ); // Example HSL colors
+  );
   $text-shadow: ();
 
   @for $i from 0 through $count {

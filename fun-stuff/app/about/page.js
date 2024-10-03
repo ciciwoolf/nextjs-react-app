@@ -3,8 +3,9 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import styles from "./about-page.module.scss";
 
-const aboutContent1 = "I'm building this site using Reactjs and Nextjs :-D";
-const aboutContent2 = "I'm having lots of fun";
+const aboutContent1 = "My name is Christine Woolf but I go by Cici";
+const aboutContent2 = "I go by Cici or C^2 :-)";
+const aboutContent3 = "I'm a Fullstack Software Developer";
 
 export default function AboutPage() {
   const [currentMsg, setCurrentMsg] = useState(aboutContent1);
@@ -20,7 +21,7 @@ export default function AboutPage() {
         );
         setAnimation(styles.slideIn);
       }, 500);
-    }, 3000); // change msg every 3 sec
+    }, 3500); // change msg every 3 sec
 
     return () => clearInterval(interval);
   }, []);
