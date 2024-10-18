@@ -6,17 +6,15 @@
   align-items: center;
   padding: $header-padding;
   position: relative;
-  z-index: 1;
 
   @media (min-width: 768px) {
-    padding: $header-padding-large;
     flex-direction: row;
   }
 
-  @media (max-width: 767px) {
+  @include respond-to("sm") {
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -32,16 +30,16 @@
     z-index: 1;
     align-items: center;
 
-    @media (max-width: 767px) {
+    @include respond-to("sm") {
       flex-direction: column;
       align-items: center;
-      gap: 1rem; /* Adjust the gap for mobile view */
+      gap: 0.75rem;
       padding: 0;
     }
   }
 
   li {
-    @media (max-width: 767px) {
+    @include respond-to("sm") {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -62,6 +60,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 18px $text-shadow-color;
+    }
+
+    @include respond-to("sm") {
+      font-size: $paragraph-font-size-sm;
     }
   }
 }

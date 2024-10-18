@@ -3,7 +3,7 @@
 .links {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
 }
 
 .ul {
@@ -13,7 +13,7 @@
   flex-direction: column;
   position: relative;
   z-index: 1;
-  @media (max-width: 767px) {
+  @include respond-to("sm") {
     flex-direction: column;
     gap: 1rem; /* Adjust the gap for mobile view */
   }
@@ -27,7 +27,7 @@
   position: relative;
   z-index: 1;
 
-  @media (max-width: 767px) {
+  @include respond-to("sm") {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@
 }
 
 .animate {
-  font-size: 2rem;
+  font-size: $title-font-size;
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -56,13 +56,17 @@
     #3bb78f,
     #6e7ff2
   );
-  background-size: 300%; /* Make background large for animation effect */
+  background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent; /* Make text transparent */
   -webkit-text-fill-color: transparent; /* For better support on Safari */
   animation: gradient-animation 5s infinite alternate; /* Apply the animation */
-  text-align: center; /* Center align the text */
+  text-align: center;
+
+  @include respond-to("sm") {
+    font-size: $title-font-size-sm;
+  }
 }
 
 /* Keyframes for gradient animation */

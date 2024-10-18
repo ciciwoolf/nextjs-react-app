@@ -1,13 +1,7 @@
 @import "./variables.scss";
 
-.header {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
 .greeting {
-  font-size: 2rem;
+  font-size: $title-font-size;
 }
 
 .hero {
@@ -65,6 +59,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
   background: linear-gradient(
     to bottom,
     $background-gradient-start,

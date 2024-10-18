@@ -8,11 +8,14 @@
 html {
   font-family: $font-family-primary;
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
   height: 100%;
   margin: 0;
+  overflow: hidden;
   background: linear-gradient(
     180deg,
     $background-gradient-start,
@@ -54,8 +57,8 @@ main img {
 h1 {
   color: $primary-text-color;
 
-  @media (max-width: 767px) {
-    gap: 1rem; /* Adjust the gap for mobile view */
+  @include respond-to("sm") {
+    gap: 1rem;
     padding: 0 1rem 0 1rem;
   }
 }
@@ -65,7 +68,8 @@ a {
   font-size: $paragraph-font-size;
   color: $primary-text-color;
 
-  @media (max-width: 767px) {
+  @include respond-to("sm") {
+    font-size: $paragraph-font-size-sm;
     gap: 1rem; /* Adjust the gap for mobile view */
     padding: 0 1rem 0 1rem;
   }
@@ -76,7 +80,7 @@ a {
   color: $primary-text-color;
   text-decoration: none;
 
-  @media (max-width: 767px) {
+  @include respond-to("sm") {
     gap: 1rem; /* Adjust the gap for mobile view */
     padding: 0 1rem 0 1rem;
   }

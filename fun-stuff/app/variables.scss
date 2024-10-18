@@ -2,14 +2,13 @@
 
 /* CSS HEX 
 
- name="Smoky black" hex="0f0a0a"
+name="Smoky black" hex="0f0a0a"
 name="Isabelline" hex="f5efed"
 name="Blue (Munsell)" hex="2292a4"
 name="Citrine" hex="bdbf09" 
- name="Cocoa Brown" hex="d96c06"
+name="Cocoa Brown" hex="d96c06"
 
 */
-// variables.scss
 
 $primary-text-color: #ddd6cb;
 $gradient-start: #37b7c3;
@@ -32,8 +31,10 @@ $font-family-logo: "Karla", sans-serif;
 
 /* Font sizes */
 $title-font-size: 2.5rem;
+$title-font-size-sm: 2rem;
 $position-font-size: 1.5rem;
 $paragraph-font-size: 25px;
+$paragraph-font-size-sm: 20px;
 $nav-font-size: 1.25rem;
 $logo-font-size: 1.5rem;
 
@@ -58,3 +59,29 @@ $logo-gap: 2rem;
 $main-margin: 5rem auto;
 $main-padding: 20px;
 $logo-letter-spacing: 0.15rem;
+
+/* Breakpoint mixins */
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "sm" {
+    @media (max-width: #{$breakpoint-sm}) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media (max-width: #{$breakpoint-md}) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media (max-width: #{$breakpoint-lg}) {
+      @content;
+    }
+  } @else if $breakpoint == "xl" {
+    @media (max-width: #{$breakpoint-xl}) {
+      @content;
+    }
+  }
+}
