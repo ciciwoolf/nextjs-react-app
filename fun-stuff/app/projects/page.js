@@ -10,11 +10,10 @@ export default function ProjectPage() {
   const num = 5;
   return (
     <main>
-      <h1 className={styles.animate}>Updates Coming Soon</h1>
       <div className={styles.links}>
         <ul className={styles.ul}>
           {projectLinks.map((project, index) => (
-            <li className={styles.li} key={index}>
+            <li className={styles.link} key={index}>
               <Link href={project.href} className={styles.projectLink}>
                 {project.label}
               </Link>

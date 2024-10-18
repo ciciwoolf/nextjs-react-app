@@ -7,7 +7,7 @@
 .hero {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding: 5rem;
   align-items: center;
   text-align: center;
   position: relative;
@@ -89,9 +89,9 @@
 
 @keyframes move {
   from {
-    transform: rotate(0deg) scale(12) translateX(-20px);
+    transform: rotate(0deg) scale(10) translateX(-10px);
   }
   to {
-    transform: rotate(360deg) scale(18) translateX(20px);
+    transform: rotate(360deg) scale(10) translateX(10px);
   }
 }
