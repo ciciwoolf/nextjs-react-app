@@ -6,7 +6,7 @@ export default function ProjectPage({ params }) {
       <h1>Art</h1>
       <p>
         <Link href="https://github.com/ciciwoolf/javascript-art">
-          Check out my repo for my JavaScript art here
+          Check out my repo for my JavaScript art
         </Link>
       </p>
       <div>Placeholder</div>

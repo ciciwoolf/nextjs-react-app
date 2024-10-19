@@ -5,19 +5,22 @@
 
   @include respond-to("sm") {
     font-size: $title-font-size-sm;
-    padding-bottom: 25px;
   }
 }
 
 .hero {
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  padding-top: 5rem;
   align-items: center;
   text-align: center;
   position: relative;
   z-index: 1;
   animation: fade 7s ease-in-out forwards;
+
+  @include respond-to("sm") {
+    padding: 0 0 5rem 0;
+  }
 }
 
 @keyframes fade {
