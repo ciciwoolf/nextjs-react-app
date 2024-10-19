@@ -9,7 +9,6 @@ export default function ProjectPage({ params }) {
           Check out my repo for my JavaScript art
         </Link>
       </p>
-      <div>Placeholder</div>
       <p>
         <Link href="/projects">Back to Projects</Link>
       </p>
