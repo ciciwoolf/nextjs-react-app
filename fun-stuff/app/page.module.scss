@@ -2,6 +2,11 @@
 
 .greeting {
   font-size: $title-font-size;
+
+  @include respond-to("sm") {
+    font-size: $title-font-size-sm;
+    padding-bottom: 25px;
+  }
 }
 
 .hero {

@@ -27,6 +27,10 @@ body {
 main {
   text-align: center;
   margin: $main-margin;
+
+  @include respond-to("sm") {
+    padding-bottom: 25px;
+  }
 }
 
 main img {
