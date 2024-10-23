@@ -15,7 +15,8 @@ html {
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: linear-gradient(
     180deg,
     $background-gradient-start,
@@ -26,22 +27,6 @@ body {
 
 main {
   text-align: center;
-  margin: $main-margin;
-
-  @include respond-to("sm") {
-    padding-bottom: 25px;
-  }
-}
-
-main img {
-  width: $image-width;
-  height: $image-height;
-  object-fit: cover;
-}
-
-.main {
-  text-align: center;
-  padding: $main-padding;
 }
 
 .title {
