@@ -5,7 +5,7 @@ export default function ProjectPage({ params }) {
     <main>
       <h1> Bootcamp Project </h1>
       <iframe
-        width="800"
+        width="450"
         height="450"
         src="https://embed.figma.com/design/aLlIsyRhgVZjoAcOcs8K86/Cici's-Chocolates?node-id=0-1&embed-host=share"
         allowfullscreen
