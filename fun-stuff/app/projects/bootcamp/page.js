@@ -5,7 +5,7 @@ import styles from "./page.module.scss";
 export default function ProjectPage({ params }) {
   return (
     <main>
-      <h1> Bootcamp Project </h1>
+      <h1 class={styles.title}> Bootcamp Project </h1>
       <div className={styles.iframeContainer}>
         <iframe
           className={styles.iframe}
