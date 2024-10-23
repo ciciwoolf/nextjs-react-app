@@ -30,11 +30,14 @@ export default function ProjectPage() {
       </div>
       <div class={styles.links}>
         <p>
-          <Link href="https://github.com/ciciwoolf/javascript-art">
-            Click here to see more projects on Github
+          <Link
+            class={styles.seeMoreLink}
+            href="https://github.com/ciciwoolf/javascript-art"
+          >
+            See more projects on Github
           </Link>
         </p>
-        <p>
+        <p class={styles.backToLink}>
           <Link href="/projects">Back to Projects</Link>
         </p>
       </div>

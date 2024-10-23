@@ -13,14 +13,21 @@ export default function ProjectPage({ params }) {
           allowFullScreen
         ></iframe>
       </div>
-      <p>
-        <Link href="https://github.com/ciciwoolf/proyecto_ciciwoolf_digitalhouse">
-          Check out my Digitalhouse Bootcamp Project repo
-        </Link>
-      </p>
-      <p>
-        <Link href="/projects">Back to Projects</Link>
-      </p>
+      <div class={styles.links}>
+        <p>
+          <Link
+            class={styles.seeMoreLink}
+            href="https://github.com/ciciwoolf/proyecto_ciciwoolf_digitalhouse"
+          >
+            See more on Github
+          </Link>
+        </p>
+        <p>
+          <Link href="/projects" class={styles.backToLink}>
+            Back to Projects
+          </Link>
+        </p>
+      </div>
       <FallingStars />
     </main>
   );

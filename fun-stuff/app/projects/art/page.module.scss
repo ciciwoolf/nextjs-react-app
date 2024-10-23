@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-
   gap: 10px;
 }
 
@@ -25,5 +24,10 @@
 }
 
 .links {
-  padding-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.backToLink {
+  font-size: 12x;
 }
