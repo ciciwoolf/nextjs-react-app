@@ -11,6 +11,7 @@
 
 .hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding-top: 5rem;
   align-items: center;
@@ -68,7 +69,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow-x: hidden;
   background: linear-gradient(
     to bottom,
     $background-gradient-start,

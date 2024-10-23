@@ -1,0 +1,15 @@
+@import "@app/variables.scss";
+
+.iframe {
+  width: 450px;
+  height: 450px;
+  overflow: auto;
+  border: 0;
+
+  @include respond-to("sm") {
+    width: 250px;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

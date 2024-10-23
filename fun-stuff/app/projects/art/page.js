@@ -14,7 +14,6 @@ export default function ProjectPage() {
             url="https://vimeo.com/1022338992"
             onReady
             playing="true"
-            loop="true"
           />
           <p>SpiderWeb</p>
         </div>
@@ -23,7 +22,6 @@ export default function ProjectPage() {
             url="https://vimeo.com/1022340807"
             onReady
             playing="true"
-            loop="true"
           />
           <p>Violet River</p>
         </div>
