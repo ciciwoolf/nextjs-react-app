@@ -19,9 +19,11 @@
   position: relative;
   z-index: 1;
   animation: fade 7s ease-in-out forwards;
+  margin-top: 8rem;
 
   @include respond-to("sm") {
     padding: 0 0 5rem;
+    margin-top: 5rem;
   }
 }
 

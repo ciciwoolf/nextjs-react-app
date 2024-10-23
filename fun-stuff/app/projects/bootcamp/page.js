@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FallingStars from "@components/falling-stars";
 import styles from "./page.module.scss";
 
 export default function ProjectPage({ params }) {
@@ -20,6 +21,7 @@ export default function ProjectPage({ params }) {
       <p>
         <Link href="/projects">Back to Projects</Link>
       </p>
+      <FallingStars />
     </main>
   );
 }

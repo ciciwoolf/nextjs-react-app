@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
+import FallingStars from "@components/falling-stars";
 
 const projectLinks = [
   { href: "/projects/bootcamp", label: "Digitalhouse" },
@@ -7,7 +8,6 @@ const projectLinks = [
 ];
 
 export default function ProjectPage() {
-  const num = 5;
   return (
     <main>
       <div className={styles.links}>
@@ -21,11 +21,7 @@ export default function ProjectPage() {
           ))}
         </ul>
       </div>
-      <div className={styles.lines}>
-        {[...Array(num)].map((_, index) => (
-          <div key={index} className={styles.line}></div>
-        ))}
-      </div>
+      <FallingStars />
     </main>
   );
 }

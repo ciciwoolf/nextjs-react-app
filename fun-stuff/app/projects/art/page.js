@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-
+import FallingStars from "@components/falling-stars";
 import ReactPlayer from "react-player/lazy";
 import styles from "./page.module.scss";
 
@@ -14,6 +14,7 @@ export default function ProjectPage() {
             url="https://vimeo.com/1022338992"
             onReady
             playing="true"
+            loop="true"
           />
           <p>SpiderWeb</p>
         </div>
@@ -22,6 +23,7 @@ export default function ProjectPage() {
             url="https://vimeo.com/1022340807"
             onReady
             playing="true"
+            loop="true"
           />
           <p>Violet River</p>
         </div>
@@ -36,6 +38,7 @@ export default function ProjectPage() {
           <Link href="/projects">Back to Projects</Link>
         </p>
       </div>
+      <FallingStars />
     </main>
   );
 }

@@ -1,0 +1,9 @@
+@import "@app/variables.scss";
+
+.mainContactPage {
+  margin-top: 10rem;
+
+  @include respond-to("sm") {
+    margin-top: 5rem;
+  }
+}
