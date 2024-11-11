@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div
       className={styles.floatingCharacters}
-      style={{ "--floating-content": char }}
+      style={{ "--floating-content": `"${char || "*"}"` }}
     >
       <div className={styles.homeBody}>
         {showWelcome ? (
