@@ -23,6 +23,8 @@ export default function Home() {
   return (
     <div
       className={styles.floatingCharacters}
+      /** Use the inline style prop to dynamically set the char variable and link it back to the --floating-content value of the content property */
+      /** Fallback is always just the * symbol */
       style={{ "--floating-content": `"${char || "*"}"` }}
     >
       <div className={styles.homeBody}>
