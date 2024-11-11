@@ -1,6 +1,11 @@
-Building a Site with Reactjs and Nextjs
+## Construction in progress: Building a personal website using Reactjs and Nextjs
 
 Check out the progress here: https://bio-nextjs-theta.vercel.app/
 
-TODO
-Embed mp4 art videos - AWS ?
+### My todo list:
+
+#### Contact Form
+
+#### Interactive input
+
+#### Footer

@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 @import "./variables.scss";
 
+/*
+Using the property box-sizing set to border-box ensures that any margin or padding
+applied to an element is contained within the predetermined set width and height,
+and does not add on in addition to it, causing growth beyond the desired size.
+*/
 * {
   box-sizing: border-box;
 }
@@ -8,8 +13,8 @@
 html {
   font-family: $font-family-primary;
   height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: hidden; /* setting overflow-x to hidden means any overflow will not be displayed*/
+  overflow-y: auto; /* setting overflow-y to auto means overflow causing a longer view will result in a scrollbar*/
 }
 
 body {

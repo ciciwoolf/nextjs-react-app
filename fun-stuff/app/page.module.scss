@@ -1,25 +1,33 @@
-@import "./variables.scss";
+@import "@app/variables.scss";
 
 .greeting {
   font-size: $title-font-size;
 
   @include respond-to("sm") {
-    padding-top: 3rem;
+    padding-top: 0;
     font-size: $title-font-size-sm;
   }
 }
 
-.hero {
+.homeBody {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 5rem;
+  margin-top: 15rem;
   align-items: center;
   text-align: center;
   position: relative;
   z-index: 1;
-  animation: fade 7s ease-in-out forwards;
-  margin-top: 8rem;
+
+  @include respond-to("sm") {
+    font-size: 18px;
+    margin-top: 5rem;
+    padding: 1rem 3rem 1rem 3rem;
+  }
+}
+
+.welcome {
+  animation: welcomeFade 3s ease-in-out forwards;
 
   @include respond-to("sm") {
     padding: 0 0 5rem;
@@ -27,22 +35,32 @@
   }
 }
 
-@keyframes fade {
+@keyframes welcomeFade {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   40% {
-    opacity: 0;
+    opacity: 1;
   }
   70% {
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
-@mixin dots($count) {
+.input {
+  animation: inputFadeIn 1s ease-in-out forwards;
+}
+
+/* Floating characters animation has been adapted from this free example: 
+https://codepen.io/hylobates-lar/pen/GRowVvx
+
+First, create a mixin called klaidescope that handles the style of the floating objects
+*/
+
+@mixin klaidescope($count) {
   $colors: (
     #f5efed,
     // Isabelline
@@ -67,7 +85,7 @@
   text-shadow: $text-shadow;
 }
 
-.colorsBody {
+.floatingCharacters {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -79,16 +97,19 @@
 
   &::before,
   &::after {
-    content: ". *";
+    content: var(
+      --floating-content,
+      "*"
+    ); /* dynamic variable controlling the content */
     position: absolute;
     top: 50%;
     left: 50%;
     width: 1em;
     height: 1em;
-    font-size: 3vmin;
+    font-size: 3vmin; /* vmin controls size according to viewport dimensions */
     mix-blend-mode: screen;
     color: transparent;
-    @include dots(40);
+    @include klaidescope(40);
     animation: move 44s -27s infinite ease-in-out alternate;
   }
 
@@ -98,9 +119,16 @@
   }
 }
 
+/*
+The move function defined to control the animation effects of the floating
+objects
+rotate starts at 0 degrees and ends at 360 deg for a full rotation
+scale starts at 5 times the size and ends at 10 times the size
+translateX starts -10px and translates along the X axis 10px on the other side
+*/
 @keyframes move {
   from {
-    transform: rotate(0deg) scale(10) translateX(-10px);
+    transform: rotate(0deg) scale(5) translateX(-10px);
   }
   to {
     transform: rotate(360deg) scale(10) translateX(10px);
