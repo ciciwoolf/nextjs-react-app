@@ -121,16 +121,20 @@ First, create a mixin called klaidescope that handles the style of the floating 
     left: 50%;
     width: 1em;
     height: 1em;
-    font-size: 16px;
+    font-size: 3vmin;
     mix-blend-mode: screen;
     color: transparent;
     @include klaidescope(40);
-    animation: move 44s -27s infinite ease-in-out alternate;
+    animation: move 40s -27s infinite ease-in-out alternate;
   }
 
   &::after {
     animation-duration: 43s;
     animation-delay: -32s;
+  }
+
+  @include respond-to("sm") {
+    height: 0vh;
   }
 }
 
