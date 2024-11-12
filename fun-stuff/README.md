@@ -6,6 +6,6 @@ Check out the progress here: https://bio-nextjs-theta.vercel.app/
 
 #### Contact Form
 
-#### Interactive input
+#### Interactive input - validation
 
 #### Footer
